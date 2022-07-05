@@ -1,6 +1,6 @@
 {
   "name": "rss-generator-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RSS.app generator API",
   "types": "lib/index.d.ts",
   "keywords": [
@@ -14,9 +14,9 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "build": "tsc",
-    "format": "prettier --write \"src/*.ts\" \"src/*.js\"",
+    "format": "prettier --write \"src/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
@@ -46,5 +46,6 @@
   ],
   "dependencies": {
     "cross-fetch": "^3.1.5"
-  }
+  },
+  "runkitExampleFilename": "runkit-example.js"
 }

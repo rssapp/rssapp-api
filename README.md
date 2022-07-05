@@ -1,6 +1,7 @@
 # RSS.app Node.js Library
 
-[![Version](https://img.shields.io/npm/v/stripe.svg)](https://www.npmjs.org/package/rss-generator-api)
+[![Version](https://img.shields.io/npm/v/rss-generator-api.svg)](https://www.npmjs.org/package/rss-generator-api)
+[![Try on RunKit](https://badge.runkitcdn.com/rss-generator-api.svg)](https://npm.runkit.com/rss-generator-api)
 
 The rss-generator-api library provides convenient access to the RSS.app API from
 applications written in JavaScript.
