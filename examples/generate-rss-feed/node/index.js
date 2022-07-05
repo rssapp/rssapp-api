@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 // Load the RssApp SDK
-const RssApp = require('../../../lib');
+const RssApp = require('rss-generator-api');
 
 // Create RssApp service object
 const rssApp = new RssApp({ apiKey: process.env.RSS_APP_API_KEY, apiSecret: process.env.RSS_APP_API_SECRET });

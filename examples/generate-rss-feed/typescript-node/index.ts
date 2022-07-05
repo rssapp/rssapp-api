@@ -1,5 +1,5 @@
 // Load the RssApp SDK
-import RssApp, { RssAppFeed, RssAppFeedList } from '../../../lib';
+import RssApp, { RssAppFeed, RssAppFeedList } from 'rss-generator-api';
 import env from 'dotenv';
 
 env.config();
