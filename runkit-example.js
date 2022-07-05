@@ -13,8 +13,7 @@ rssApp.feed
     console.log('Success', feed);
   })
   .catch((err) => {
-    console.log('Error1', err);
-    require('rss-generator-api');
+    console.log('Error', err);
   });
 
 // Call RssApp to list the feeds
@@ -24,5 +23,5 @@ rssApp.feed
     console.log('Success', list.data);
   })
   .catch((err) => {
-    console.log('Error2', err);
+    console.log('Error', err);
   });
