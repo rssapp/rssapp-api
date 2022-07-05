@@ -59,12 +59,12 @@ export type RssAppFeed = {
     url: string;
     mimeType: string;
   };
-  items: Array<RssAppFeedFeedItem>;
+  items: RssAppFeedFeedItem[];
 };
 
 export type RssAppFeedList = {
   total: number;
   offset: number;
   limit: number;
-  data: Array<RssAppFeed>;
+  data: RssAppFeed[];
 };

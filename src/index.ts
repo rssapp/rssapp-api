@@ -39,7 +39,7 @@ class RssApp {
      * Returns a list of feeds in the account.
      *
      * @param options - Limit and offset options
-     * @returns Promise<Array<Feed>>
+     * @returns Promise<Feed[]>
      *
      * @see {@link https://rss.app/docs/api/feed/list | List Feed Documentation}
      */
@@ -106,8 +106,10 @@ class RssApp {
 
   private _getUrl(path: string, queryParams: { [key: string]: string }): URL {
     const url = new URL(`${this._api.host}${this._api.basePath}${path}`);
-    for (let k in queryParams) {
-      url.searchParams.append(k, queryParams[k]);
+    for (const k in queryParams) {
+      if (queryParams.hasOwnProperty(k)) {
+        url.searchParams.append(k, queryParams[k]);
+      }
     }
     return url;
   }
