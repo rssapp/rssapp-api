@@ -1,0 +1,20 @@
+{
+  "name": "generate-rss-feed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node/index.js",
+  "scripts": {
+    "vanilla": "node node/index.js",
+    "typescript": "tsc --build typescript-node/tsconfig.json && node typescript-node/index.js"
+  },
+  "author": "RSS.app",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.1.4",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "stripe": "^8.0.1",
+    "typescript": "^3.7.4"
+  }
+}

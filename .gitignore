@@ -1,0 +1,3 @@
+node_modules
+/lib
+examples/generate-rss-feed/typescript-node/*.js
