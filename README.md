@@ -87,7 +87,6 @@ rssApp.feed
     url: 'https://bbc.com',
   })
   .then((feed) => {
-    // have access to the customer object
     return rssApp.feed
       .list({
         limit: 10,
