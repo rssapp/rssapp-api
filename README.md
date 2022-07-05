@@ -36,13 +36,13 @@ const RssApp = require('rss-generator-api');
 const rssApp = new RssApp({ apiKey:  'c_...', apiSecret:  's_...' });
 
 rssApp.feed
-.create({ url:  'https://bbc.com' })
-.then((feed) => {
-	console.log('Success', feed);
-})
-.catch((err) => {
-	console.log('Error', err);
-});
+  .create({ url:  'https://bbc.com' })
+  .then((feed) => {
+     console.log('Success', feed);
+  })
+  .catch((err) => {
+    console.log('Error', err);
+  });
 ```
 
 Or using ES modules and `async`/`await`:
