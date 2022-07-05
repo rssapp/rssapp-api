@@ -61,3 +61,10 @@ export type RssAppFeed = {
   };
   items: Array<RssAppFeedFeedItem>;
 };
+
+export type RssAppFeedList = {
+  total: number;
+  offset: number;
+  limit: number;
+  data: Array<RssAppFeed>;
+};

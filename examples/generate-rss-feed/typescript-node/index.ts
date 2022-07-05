@@ -1,5 +1,5 @@
 // Load the RssApp SDK
-import RssApp, { RssAppFeed } from '../../../lib';
+import RssApp, { RssAppFeed, RssAppFeedList } from '../../../lib';
 import env from 'dotenv';
 
 env.config();
@@ -20,8 +20,8 @@ rssApp.feed
 // Call RssApp to list the feeds
 rssApp.feed
   .list({ limit: 10, offset: 0 })
-  .then((feeds: Array<RssAppFeed>) => {
-    console.log('Success', feeds);
+  .then((list: RssAppFeedList) => {
+    console.log('Success', list.data);
   })
   .catch((err) => {
     console.log('Error', err);

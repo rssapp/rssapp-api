@@ -8,6 +8,7 @@ import {
   RssAppCredentials,
   RssAppListOptions,
   RssAppOptions,
+  RssAppFeedList,
 } from './types';
 
 const DEFAULT_HOST = 'https://api.rss.app';
@@ -42,7 +43,7 @@ class RssApp {
      *
      * @see {@link https://rss.app/docs/api/feed/list | List Feed Documentation}
      */
-    list: (options?: RssAppListOptions): Promise<Array<RssAppFeed>> => {
+    list: (options?: RssAppListOptions): Promise<RssAppFeedList> => {
       return this._makeRequest({
         method: ERssAppRequestMethod.GET,
         path: 'feed',
@@ -120,7 +121,7 @@ class RssApp {
   }
 }
 
-export { RssAppCredentials, RssAppOptions, RssAppListOptions, CreateFeedOptions, RssAppFeed };
+export { RssAppCredentials, RssAppOptions, RssAppListOptions, CreateFeedOptions, RssAppFeed, RssAppFeedList };
 export default RssApp;
 
 module.exports = RssApp;

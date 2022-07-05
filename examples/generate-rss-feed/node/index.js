@@ -19,8 +19,8 @@ rssApp.feed
 // Call RssApp to list the feeds
 rssApp.feed
   .list({ limit: 10, offset: 0 })
-  .then((feeds) => {
-    console.log('Success', feeds);
+  .then((list) => {
+    console.log('Success', list.data);
   })
   .catch((err) => {
     console.log('Error', err);
