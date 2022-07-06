@@ -2,6 +2,8 @@
 
 [![Version](https://img.shields.io/npm/v/rss-generator-api.svg)](https://www.npmjs.org/package/rss-generator-api)
 [![Try on RunKit](https://badge.runkitcdn.com/rss-generator-api.svg)](https://npm.runkit.com/rss-generator-api)
+[![Types](https://badgen.net/npm/types/rss-generator-api)](https://www.npmjs.org/package/rss-generator-api)
+[![Covarage](https://badgen.net/codecov/c/github/babel/babel)](https://www.npmjs.org/package/rss-generator-api)
 
 The rss-generator-api library provides convenient access to the RSS.app API from
 applications written in JavaScript.
@@ -9,6 +11,13 @@ applications written in JavaScript.
 ## Documentation
 
 See the [ API docs](https://rss.app/docs/api) for Node.js.
+
+## Live Demo
+
+A minimal demo project can be found in [examples directory](https://github.com/RSSapp/rssapp-node/tree/main/examples).
+
+[Online demo](https://npm.runkit.com/rss-generator-api) is also available!
+
 
 ## Requirements
 

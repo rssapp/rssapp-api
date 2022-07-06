@@ -2,8 +2,8 @@
 const RssApp = require('rss-generator-api');
 // Create RssApp service object
 const rssApp = new RssApp({
-  apiKey: 'c_...',
-  apiSecret: 's_...',
+  apiKey: 'c_05ZRCU3EuVX9ga',
+  apiSecret: 's_5umGAwCuP8Ys97nyqZQ8JS',
 });
 
 // Call RssApp to create the feed

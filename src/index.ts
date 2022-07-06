@@ -9,6 +9,7 @@ import {
   RssAppListOptions,
   RssAppOptions,
   RssAppFeedList,
+  RssAppError,
 } from './types';
 
 const DEFAULT_HOST = 'https://api.rss.app';
@@ -47,7 +48,7 @@ class RssApp {
       return this._makeRequest({
         method: ERssAppRequestMethod.GET,
         path: 'feed',
-        params: options,
+        params: options && { $limit: options.limit, $offset: options.offset },
       });
     },
     /**
@@ -119,7 +120,17 @@ class RssApp {
       method: options.method,
       headers: this._getHeaders(),
       body: options.body && JSON.stringify(options.body),
-    }).then((response) => response.json());
+    }).then(async (response) => {
+      if (!response.ok) {
+        // create error object and reject if not a 2xx response code
+        const err: RssAppError = new Error('HTTP status code: ' + response.status);
+        err.response = await response.json();
+        err.status = response.status;
+        throw err;
+      } else {
+        return response.json();
+      }
+    });
   }
 }
 

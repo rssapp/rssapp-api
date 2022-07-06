@@ -4,9 +4,9 @@ export type RssAppCredentials = {
 };
 
 export type RssAppOptions = {
-  host: string;
-  port: string;
-  protocol: string;
+  host?: string;
+  port?: string;
+  protocol?: string;
 };
 
 export type CreateFeedOptions = {
@@ -68,3 +68,14 @@ export type RssAppFeedList = {
   limit: number;
   data: RssAppFeed[];
 };
+
+export type RssAppErrorResponse = {
+  message: string;
+  statusCode: number;
+  errors: {
+    title: string;
+    code: string;
+  }[];
+};
+
+export type RssAppError = Error & { response?: RssAppErrorResponse; status?: number };
