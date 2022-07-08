@@ -18,7 +18,6 @@ A minimal demo project can be found in [examples directory](https://github.com/R
 
 [Online demo](https://npm.runkit.com/rss-generator-api) is also available!
 
-
 ## Requirements
 
 Node 8 or higher.
@@ -114,3 +113,7 @@ rssApp.feed
 
 - [Error Handling](https://rss.app/docs/api/errors)
 - [Pagination](https://rss.app/docs/api/pagination)
+
+## License
+
+Rss Generator API is freely distributable under the terms of the [MIT license](https://github.com/RSSapp/rssapp-node/blob/main/LICENSE).
