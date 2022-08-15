@@ -12,7 +12,8 @@ import {
   RssAppError,
 } from './types';
 
-const DEFAULT_HOST = 'https://api.rss.app';
+const DEFAULT_PROTOCOL = 'https';
+const DEFAULT_HOST = DEFAULT_PROTOCOL + '://' + 'api.rss.app';
 const DEFAULT_BASE_PATH = '/api/v1/';
 
 class RssApp {
@@ -30,7 +31,7 @@ class RssApp {
     this._credentials = credentials;
     this._api = {
       host: options?.host || DEFAULT_HOST,
-      protocol: options?.protocol || 'https',
+      protocol: options?.protocol || DEFAULT_PROTOCOL,
       basePath: DEFAULT_BASE_PATH,
     };
   }
@@ -51,6 +52,7 @@ class RssApp {
         params: options && { $limit: options.limit, $offset: options.offset },
       });
     },
+
     /**
      * A feed is returned. Otherwise, an error is returned.
      *
@@ -65,6 +67,7 @@ class RssApp {
         path: `feed/${feedId}`,
       });
     },
+
     /**
      * A feed with posts is returned. Otherwise, an error is returned.
      *
@@ -82,6 +85,7 @@ class RssApp {
         body: createFeedOptions,
       });
     },
+
     /**
      * A feed with posts is returned. Otherwise, an error is returned.
      *

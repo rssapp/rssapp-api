@@ -1,6 +1,6 @@
 {
   "name": "rss-generator-api",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "RSS.app generator API",
   "types": "lib/index.d.ts",
   "keywords": [
