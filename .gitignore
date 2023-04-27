@@ -3,3 +3,4 @@ node_modules
 examples/generate-rss-feed/typescript-node/*.js
 coverage
 .env
+.npmrc
