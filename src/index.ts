@@ -14,7 +14,7 @@ import {
 
 const DEFAULT_PROTOCOL = 'https';
 const DEFAULT_HOST = DEFAULT_PROTOCOL + '://' + 'api.rss.app';
-const DEFAULT_BASE_PATH = '/api/v1/';
+const DEFAULT_BASE_PATH = '/v1/';
 
 class RssApp {
   private _credentials: RssAppCredentials;

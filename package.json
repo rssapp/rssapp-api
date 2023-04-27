@@ -1,6 +1,6 @@
 {
   "name": "rss-generator-api",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "RSS.app generator API",
   "types": "lib/index.d.ts",
   "keywords": [
@@ -29,12 +29,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RSSapp/rssapp-node.git"
+    "url": "https://github.com/rssapp/rssapp-node.git"
   },
   "author": "RSS.app",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RSSapp/rssapp-node/issues"
+    "url": "https://github.com/rssapp/rssapp-node/issues"
   },
   "homepage": "https://rss.app/docs/api/",
   "devDependencies": {
