@@ -41,20 +41,18 @@ export type MakeRequestOptions = {
 export type RssAppFeedFeedItem = {
   title: string;
   url: string;
-  description: string;
-  author: string;
-  publishedAt: string;
-  thumbnail: {
-    url: string;
-    mimeType: string;
-  };
+  description_text: string;
+  description_html?: string;
+  date_published: string;
+  thumbnail: string;
 };
 
 export type RssAppFeed = {
+  [x: string]: any;
   id: string;
   title: string;
   description: string;
-  source: { url: string };
+  source_url: string;
   icon: {
     url: string;
     mimeType: string;

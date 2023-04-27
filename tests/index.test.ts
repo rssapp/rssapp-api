@@ -16,7 +16,7 @@ describe('Testing Feed Apis', () => {
   });
   test('Create feed from bbc.com', async () => {
     const feed = await rssApp.feed.create({ url: 'https://www.bbc.com' });
-    expect(feed.source.url).toBe('https://www.bbc.com');
+    expect(feed.source_url).toBe('https://www.bbc.com');
   });
   test('List feeds', async () => {
     const feeds = await rssApp.feed.list({ limit: 5 });
