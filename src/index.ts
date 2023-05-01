@@ -43,12 +43,12 @@ class RssApp {
      * @param options - Limit and offset options
      * @returns Promise<Feed[]>
      *
-     * @see {@link https://rss.app/docs/api/feed/list | List Feed Documentation}
+     * @see {@link https://rss.app/docs/api/feeds/list | List Feed Documentation}
      */
     list: (options?: RssAppListOptions): Promise<RssAppFeedList> => {
       return this._makeRequest({
         method: ERssAppRequestMethod.GET,
-        path: 'feed',
+        path: 'feeds',
         params: options && { $limit: options.limit, $offset: options.offset },
       });
     },
@@ -59,12 +59,12 @@ class RssApp {
      * @param feedId - Feed id
      * @returns Promise<Feed>
      *
-     * @see {@link https://rss.app/docs/api/feed/get | Get Feed Documentation}
+     * @see {@link https://rss.app/docs/api/feeds/get | Get Feed Documentation}
      */
     get: (feedId: string): Promise<RssAppFeed> => {
       return this._makeRequest({
         method: ERssAppRequestMethod.GET,
-        path: `feed/${feedId}`,
+        path: `feeds/${feedId}`,
       });
     },
 
@@ -76,12 +76,12 @@ class RssApp {
      *
      * @example https://bbc.com
      *
-     * @see {@link https://rss.app/docs/api/feed/create | Create Feed Documentation}
+     * @see {@link https://rss.app/docs/api/feeds/create | Create Feed Documentation}
      */
     create: (createFeedOptions: CreateFeedOptions): Promise<RssAppFeed> => {
       return this._makeRequest({
         method: ERssAppRequestMethod.POST,
-        path: `feed`,
+        path: `feeds`,
         body: createFeedOptions,
       });
     },
@@ -92,12 +92,12 @@ class RssApp {
      * @param feedId - Feed id
      * @returns Promise<{ id: string; deleted: boolean }>
      *
-     * @see {@link https://rss.app/docs/api/feed/delete | Delete Feed Documentation}
+     * @see {@link https://rss.app/docs/api/feeds/delete | Delete Feed Documentation}
      */
     delete: (feedId: string): Promise<{ id: string; deleted: boolean }> => {
       return this._makeRequest({
         method: ERssAppRequestMethod.DELETE,
-        path: `feed/${feedId}`,
+        path: `feeds/${feedId}`,
       });
     },
   };

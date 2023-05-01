@@ -1,7 +1,7 @@
 {
   "name": "rss-generator-api",
-  "version": "1.0.8",
-  "description": "RSS.app generator API",
+  "version": "1.0.9",
+  "description": "RSS.app API - Generate RSS feeds from almot any website without coding",
   "types": "lib/index.d.ts",
   "keywords": [
     "RSS",
